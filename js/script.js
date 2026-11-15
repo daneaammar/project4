@@ -284,7 +284,7 @@ function decreaseproduct(id) {
 logoutb.addEventListener("click", function (e) {
    e.preventDefault();
    alert("you are logout")
-   localStorage.removeItem("email");
+   localStorage.clear();
 
 
    setTimeout(() => {

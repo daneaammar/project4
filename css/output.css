@@ -220,6 +220,9 @@
   .-left-\[22\%\] {
     left: calc(22% * -1);
   }
+  .left-0 {
+    left: 0px;
+  }
   .left-10 {
     left: calc(var(--spacing) * 10);
   }
@@ -231,6 +234,9 @@
   }
   .left-20 {
     left: calc(var(--spacing) * 20);
+  }
+  .left-25 {
+    left: calc(var(--spacing) * 25);
   }
   .left-30 {
     left: calc(var(--spacing) * 30);
@@ -375,8 +381,23 @@
     width: 80px;
     height: 80px;
   }
+  .h-\[0px\] {
+    height: 0px;
+  }
   .h-\[1px\] {
     height: 1px;
+  }
+  .h-\[10\%\] {
+    height: 10%;
+  }
+  .h-\[10\] {
+    height: 10;
+  }
+  .h-\[20\%\] {
+    height: 20%;
+  }
+  .h-\[20\] {
+    height: 20;
   }
   .h-\[65\%\] {
     height: 65%;
@@ -384,14 +405,38 @@
   .h-\[90\%\] {
     height: 90%;
   }
+  .h-\[90\] {
+    height: 90;
+  }
   .h-\[90px\] {
     height: 90px;
+  }
+  .h-\[100px\] {
+    height: 100px;
   }
   .h-\[150px\] {
     height: 150px;
   }
   .h-\[200px\] {
     height: 200px;
+  }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[400px\] {
+    height: 400px;
+  }
+  .h-\[450px\] {
+    height: 450px;
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .h-\[600\] {
+    height: 600;
+  }
+  .h-\[600px\] {
+    height: 600px;
   }
   .max-h-\[70\%\] {
     max-height: 70%;
@@ -416,6 +461,12 @@
   }
   .w-\[80\%\] {
     width: 80%;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
+  .w-\[250px\] {
+    width: 250px;
   }
   .w-\[300px\] {
     width: 300px;
@@ -661,6 +712,12 @@
   .text-\[25px\] {
     font-size: 25px;
   }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
   .text-\[50px\] {
     font-size: 50px;
   }
@@ -801,6 +858,9 @@
     .md\:flex {
       display: flex;
     }
+    .md\:inline {
+      display: inline;
+    }
     .md\:h-\[100px\] {
       height: 100px;
     }
@@ -813,6 +873,9 @@
     .md\:w-\[20\%\] {
       width: 20%;
     }
+    .md\:w-\[20\] {
+      width: 20;
+    }
     .md\:w-\[40\%\] {
       width: 40%;
     }
@@ -821,6 +884,9 @@
     }
     .md\:w-\[80\%\] {
       width: 80%;
+    }
+    .md\:w-\[300px\] {
+      width: 300px;
     }
     .md\:w-\[350px\] {
       width: 350px;

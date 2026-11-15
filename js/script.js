@@ -22,8 +22,8 @@ cartItems.forEach(element => {
 });
 //number select
 
-if(cartItems.length>0){
-cartnumber.textContent = cartItems.length;
+if (cartItems.length > 0) {
+   cartnumber.textContent = cartItems.length;
 }
 
 //
@@ -33,22 +33,22 @@ if (email) {
    registerb.classList.add("hidden")
    name.textContent = `hello,${firstname}`
    products.classList.remove("hidden")
-    cartnumber.classList.remove("hidden")
-      shop.classList.remove("hidden")
-      
-      shop.style.display="block";
-    updateheart();
-  
-    
-   
+   cartnumber.classList.remove("hidden")
+   shop.classList.remove("hidden")
+
+   shop.style.display = "block";
+   updateheart();
+
+
+
 
 }
 else {
-       shop.style.display="none";
+   shop.style.display = "none";
    logoutb.classList.add("hidden")
    loginb.classList.remove("hidden")
    registerb.classList.remove("hidden")
-     shop.classList.add("hidden")
+   shop.classList.add("hidden")
 
    products.classList.add("hidden")
    name.textContent = ""
@@ -158,13 +158,16 @@ function updateheart() {
 
 // show and hidden shop
 shop.addEventListener("click", shopview)
-function shopview() { cart.classList.toggle("hidden")
-   if(cartItems.length==0){
-      cart.innerHTML=""
+function shopview() {
+   cart.classList.toggle("hidden")
+   if (cartItems.length == 0) {
+      cart.innerHTML = ""
       cart.classList.add("hidden");
-     
-   
-    return; }}
+
+
+      return;
+   }
+}
 
 
 
@@ -190,9 +193,9 @@ function check(id) {
       cartItems.push({ ...choseenitem, quantity: 1 });
    }
    localStorage.setItem("cartItems", JSON.stringify(cartItems))
-   if(cartItems.length>0){
-cartnumber.textContent = cartItems.length;
-}
+   if (cartItems.length > 0) {
+      cartnumber.textContent = cartItems.length;
+   }
    showselectproduct()
    updatebuttons()
 
@@ -200,7 +203,7 @@ cartnumber.textContent = cartItems.length;
 
 }
 function updatebuttons(e) {
-   
+
    const buttons = document.querySelectorAll(".btn-select")
    buttons.forEach(function (btn, index) {
       const id = pr[index].id;
@@ -209,15 +212,15 @@ function updatebuttons(e) {
       })
       if (founds) {
          btn.textContent = "Remove From Cart"
-       
-         
-         btn.style.backgroundColor="#791507";
 
-               }
+
+         btn.style.backgroundColor = "#791507";
+
+      }
       else {
          btn.textContent = "Add To Cart";
-          btn.style.backgroundColor="#C68E45";
-   
+         btn.style.backgroundColor = "#C68E45";
+
       }
    }
    )
@@ -319,51 +322,55 @@ function search(e) {
       if (prsearch) {
          const element = document.getElementById(`pr-${prsearch.id}`);
          element.classList.remove("hidden");
-          
-         }
 
-      
+      }
+
+
       else {
          alert("please enter a valid search term");
-               document.querySelectorAll(".item").forEach(function (elem) {
-              elem.classList.remove("hidden");
-      });
+         document.querySelectorAll(".item").forEach(function (elem) {
+            elem.classList.remove("hidden");
+         });
+      }
    }
-}
 
-         if (type === "title") {
-          const prsearch = pr.find(function (elem) {
+
+
+   if (type === "title") {
+      const prsearch = pr.find(function (elem) {
          return elem.title.trim().toLowerCase() === text.trim().toLowerCase();
 
       });
       if (prsearch) {
          const element = document.getElementById(`pr-${prsearch.id}`);
-        
+
          element.classList.remove("hidden");
       }
       else {
          alert("please enter a valid search term");
-          document.querySelectorAll(".item").forEach(function (elem) {
-     elem.classList.remove("hidden");
-   });
+         document.querySelectorAll(".item").forEach(function (elem) {
+            elem.classList.remove("hidden");
+         });
       }
 
 
-   }}
-   textinput.addEventListener("input",research)
-   function research(e){
+   }
+}
+textinput.addEventListener("input", research)
+function research(e) {
 
-       e.preventDefault();
-       if(textinput.value===""){
-            document.querySelectorAll(".item").forEach(function (elem) {
-      elem.classList.remove("hidden");}
-   );
-      return textinput.textContent="";
+   e.preventDefault();
+   if (textinput.value === "") {
+      document.querySelectorAll(".item").forEach(function (elem) {
+         elem.classList.remove("hidden");
+      }
+      );
+      return textinput.textContent = "";
 
    }
 }
 
 
-  
+
 
 // npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch 

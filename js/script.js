@@ -34,15 +34,21 @@ if (email) {
    name.textContent = `hello,${firstname}`
    products.classList.remove("hidden")
     cartnumber.classList.remove("hidden")
+      shop.classList.remove("hidden")
+      
+      shop.style.display="block";
     updateheart();
+  
     
    
 
 }
 else {
+       shop.style.display="none";
    logoutb.classList.add("hidden")
    loginb.classList.remove("hidden")
    registerb.classList.remove("hidden")
+     shop.classList.add("hidden")
 
    products.classList.add("hidden")
    name.textContent = ""

@@ -322,13 +322,14 @@ function search(e) {
           
          }
 
-      }
+      
       else {
          alert("please enter a valid search term");
                document.querySelectorAll(".item").forEach(function (elem) {
               elem.classList.remove("hidden");
       });
    }
+}
 
          if (type === "title") {
           const prsearch = pr.find(function (elem) {
@@ -343,7 +344,7 @@ function search(e) {
       else {
          alert("please enter a valid search term");
           document.querySelectorAll(".item").forEach(function (elem) {
-      elem.classList.remove("hidden");
+     elem.classList.remove("hidden");
    });
       }
 
